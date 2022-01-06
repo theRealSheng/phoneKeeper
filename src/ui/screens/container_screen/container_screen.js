@@ -36,7 +36,7 @@ const ContainerScreen = ({children}) => {
   }, [message, setMessage, errorMessage, setErrorMessage, deleteSuccess, setDeleteSuccess]);
 
   return (
-    <KeyboardAvoidingView behavior={Settings.isIos ? 'padding' : 'height'} style={styles.container}>
+    <KeyboardAvoidingView keyboardVerticalOffset={80} behavior={Settings.isIos ? 'padding' : 'height'} style={styles.container}>
       <AnimatedWrapper
         showAnimation={message}
         title={message}

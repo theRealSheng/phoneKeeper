@@ -42,6 +42,7 @@ const AddPhoneScreen = ({navigation}) => {
         type,
       },
     };
+    console.log('phoneData', phoneData);
     const added = await addNewPhone(phoneData);
     if (added) {
       navigation.goBack();

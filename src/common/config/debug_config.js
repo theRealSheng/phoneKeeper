@@ -5,7 +5,7 @@ const DebugConfig = {
   showEvents: false,
   ignoreSafeMode: false,
   disableChat: true,
-  selectedServer: 'local',
+  selectedServer: 'prod',
 };
 
 export default DebugConfig;

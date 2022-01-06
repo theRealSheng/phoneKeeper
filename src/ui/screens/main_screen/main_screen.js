@@ -31,7 +31,7 @@ const MainScreen = ({navigation}) => {
     setRefreshing(true);
     setTimeout(() => {
       setRefreshing(false);
-    }, 2000);
+    }, 0);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

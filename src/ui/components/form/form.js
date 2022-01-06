@@ -34,7 +34,16 @@ const Form = ({defaultValues, components, onSubmit, submitText}) => {
                 rules={!rules ? {} : rules}
                 render={({field: {onChange, onBlur, value}}) => {
                   if (type === 'input') {
-                    return <TextInput key={`${keyValue}-input`} {...extrPprops} onBlur={onBlur} onChangeText={onChange} value={value} />;
+                    return (
+                      <TextInput
+                        testID={`${keyValue}-input`}
+                        key={`${keyValue}-input`}
+                        {...extrPprops}
+                        onBlur={onBlur}
+                        onChangeText={onChange}
+                        value={value}
+                      />
+                    );
                   }
                   return null;
                 }}
@@ -46,7 +55,13 @@ const Form = ({defaultValues, components, onSubmit, submitText}) => {
             </View>
           );
         })}
-      <ButtonWithText text={submitText || 'Submit'} onPress={handleSubmit(onSubmit)} btnStyle={styles.submit} textStyle={styles.btnText} />
+      <ButtonWithText
+        testID={'form-submit-btn'}
+        text={submitText || 'Submit'}
+        onPress={handleSubmit(onSubmit)}
+        btnStyle={styles.submit}
+        textStyle={styles.btnText}
+      />
     </View>
   );
 };
