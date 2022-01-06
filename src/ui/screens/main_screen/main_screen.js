@@ -37,7 +37,7 @@ const MainScreen = ({navigation}) => {
 
   const renderAddButton = (absolute = false) => {
     return (
-      <TouchableOpacity onPress={onPressAddPhone} style={!absolute ? styles.add : styles.addAbsolute}>
+      <TouchableOpacity testID={'main_screen.add-button'} onPress={onPressAddPhone} style={!absolute ? styles.add : styles.addAbsolute}>
         <LottieView ref={addButtonRef} style={styles.lottie} source={require('../../assets/lottie/add_new.json')} speed={4} />
       </TouchableOpacity>
     );

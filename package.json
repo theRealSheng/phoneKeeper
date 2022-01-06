@@ -3,12 +3,20 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
+    "android": "adb reverse tcp:8081 tcp:8081 && react-native run-android",
     "android_dev": "adb reverse tcp:3000 tcp:3000 && react-native run-android",
     "ios": "npx react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "build_test_ios": "detox build --configuration ios.sim.debug",
+    "build_test_ios_release": "detox build --configuration ios.sim.release",
+    "test_ios": "detox test --configuration ios.sim.debug",
+    "test_ios_release": "detox test --configuration ios.sim.release",
+    "build_test_android": "detox build --configuration android.sim.debug",
+    "build_test_android_release": "detox build --configuration android.sim.release",
+    "test_android": "detox test --configuration android.sim.debug",
+    "test_android_release": "detox test --configuration android.sim.release"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.15.14",
@@ -17,7 +25,6 @@
     "@react-navigation/stack": "^6.0.11",
     "axios": "^0.24.0",
     "base64-arraybuffer": "^1.0.1",
-    "detox": "^19.4.1",
     "jetifier": "^2.0.0",
     "lodash": "^4.17.21",
     "lottie-ios": "3.2.3",
@@ -39,12 +46,15 @@
     "@babel/runtime": "^7.12.5",
     "@react-native-community/eslint-config": "^2.0.0",
     "babel-jest": "^26.6.3",
+    "detox": "^19.4.1",
     "eslint": "7.14.0",
     "jest": "^26.6.3",
+    "jest-circus": "^27.4.6",
     "metro-react-native-babel-preset": "^0.66.2",
     "react-test-renderer": "17.0.2"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "setupFiles": ["./detox/jest_setup_file.js"]
   }
 }

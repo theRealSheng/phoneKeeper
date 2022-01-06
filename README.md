@@ -8,3 +8,14 @@ https://reactnative.dev/docs/environment-setup
 
 ### How to run
 ## Local
+
+
+### Run E2E testing
+## IOS
+
+
+## Android
+Go to .detoxrs.json file at root level.
+
+Change the avdName in devices.emulator.device.avdName to the emulator name in your system.
+
