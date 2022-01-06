@@ -1,5 +1,5 @@
 #### Phone Keeper
-The app is allows to keep track of mobile data.
+The app is allows to create a list of mobile details list.
 
 ### Set up environment
 Please follow the instructions at the following link and install depending on the operating system you are using.
