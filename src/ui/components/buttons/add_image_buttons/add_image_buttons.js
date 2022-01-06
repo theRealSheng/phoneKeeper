@@ -5,7 +5,7 @@ import styles from './add_image_buttons.styles';
 
 import ButtonWithText from '../button_with_text';
 
-import {useImagePicker} from '../../../hooks/useImagePicker';
+import {useImagePicker} from '../../../hooks/use_image_picker';
 
 const AddImageButtons = ({onSelect, cntrStyle = {}, btnStyle = {}}) => {
   const {onPressOpenCamera, onPressOPenLibrary} = useImagePicker({onSelect});

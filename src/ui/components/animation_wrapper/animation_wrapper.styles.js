@@ -5,16 +5,16 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    borderColor: 'red',
-    borderWidth: 2,
     position: 'relative',
     height: '100%',
     width: '100%',
+    alignItems: 'center',
   },
   lottie: {
     width: '100%',
     aspectRatio: 1,
     padding: 10,
+    marginTop: 20,
   },
   title: {
     fontSize: Fonts.Size.l,
