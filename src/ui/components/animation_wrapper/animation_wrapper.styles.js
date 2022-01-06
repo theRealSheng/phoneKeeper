@@ -4,13 +4,17 @@ import {Fonts} from '../../styles/fonts';
 export default StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
     justifyContent: 'center',
+    borderColor: 'red',
+    borderWidth: 2,
+    position: 'relative',
+    height: '100%',
+    width: '100%',
   },
   lottie: {
-    flex: 1,
     width: '100%',
-    aspectRatio: 0.5,
+    aspectRatio: 1,
+    padding: 10,
   },
   title: {
     fontSize: Fonts.Size.l,

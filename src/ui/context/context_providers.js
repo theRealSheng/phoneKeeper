@@ -6,9 +6,7 @@ import {UIProvider} from './ui_context';
 const ContextProvider = ({children}) => {
   return (
     <UIProvider>
-      <PhoneContextProvider>
-        {children}
-      </PhoneContextProvider>
+      <PhoneContextProvider>{children}</PhoneContextProvider>
     </UIProvider>
   );
 };

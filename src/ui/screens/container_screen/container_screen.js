@@ -41,24 +41,18 @@ const ContainerScreen = ({children}) => {
         showAnimation={message}
         title={message}
         source={require('../../assets/lottie/success.json')}
-        containerStyle={styles.lottieContainer}
-        style={styles.successLottie}
         textStyle={styles.successText}
       >
         <AnimatedWrapper
           showAnimation={errorMessage}
           title={errorMessage}
           source={require('../../assets/lottie/failed.json')}
-          containerStyle={styles.lottieContainer}
-          style={styles.successLottie}
           textStyle={styles.failedText}
         >
           <AnimatedWrapper
             showAnimation={deleteSuccess}
             title={deleteSuccess}
             source={require('../../assets/lottie/delete.json')}
-            containerStyle={styles.lottieContainer}
-            style={styles.successDeleteLottie}
             textStyle={styles.failedText}
           >
             <AnimatedWrapper showAnimation={loading} source={require('../../assets/lottie/loading.json')}>

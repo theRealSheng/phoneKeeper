@@ -3,6 +3,9 @@ import {Fonts} from '../../styles/fonts';
 import {Spacing} from '../../styles/spacing';
 
 export default StyleSheet.create({
+  lottieWrapper: {
+    flex: 1,
+  },
   container: {
     height: '100%',
     padding: Spacing.xl,

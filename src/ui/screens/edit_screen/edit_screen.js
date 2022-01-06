@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {View, Text, ScrollView, TouchableOpacity} from 'react-native';
-import LottieView from 'lottie-react-native';
 
 import styles from './edit_screen.styles';
 

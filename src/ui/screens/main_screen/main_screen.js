@@ -14,7 +14,7 @@ const MainScreen = ({navigation}) => {
 
   const addButtonRef = useRef(null);
 
-  const {phoneList, refreshPhoneList, setSelectedPhone, deletePhone} = usePhoneContext();
+  const {phoneList, refreshPhoneList, onSetSelectedPhone, deletePhone} = usePhoneContext();
 
   const onPressAddPhone = () => {
     setHideScroll(true);
@@ -61,14 +61,14 @@ const MainScreen = ({navigation}) => {
   const onPressDelete = (id, photoId) => deletePhone(id, photoId);
 
   const onPressEdit = (phone) => {
-    setSelectedPhone(phone);
+    onSetSelectedPhone(phone);
     setTimeout(() => {
       navigation.navigate('EditScreen');
     }, 200);
   };
 
   const onPressView = (phone) => {
-    setSelectedPhone(phone);
+    onSetSelectedPhone(phone);
     setTimeout(() => {
       navigation.navigate('DetailScreen');
     }, 200);

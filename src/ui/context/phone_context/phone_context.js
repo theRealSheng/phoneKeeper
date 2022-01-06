@@ -74,9 +74,8 @@ const PhoneContextProvider = ({children}) => {
       AsyncStorageService.set('list', JSON.stringify(newList));
       setLoading(false);
       return true;
-    } else {
-      setErrorMessage('Delete failed, please try again');
     }
+    setErrorMessage('Delete failed, please try again');
     setLoading(false);
     return false;
   };
@@ -107,7 +106,6 @@ const PhoneContextProvider = ({children}) => {
   const updatePhoneWithOutImage = async (phoneData) => {
     const updatePhone = await UpdatePhoneseCase(phoneData);
     if (updatePhone) {
-      console.log('updatePhoneWithOutImag updatePhone', updatePhone);
       setMessage('Successfully updated!');
       const parseList = phoneList.map((item) => {
         if (item._id === updatePhone._id) {
@@ -127,6 +125,10 @@ const PhoneContextProvider = ({children}) => {
     return false;
   };
 
+  const onSetSelectedPhone = (phone) => {
+    setSelectedPhone(phone);
+  };
+
   return (
     <PhoneContext.Provider
       value={{
@@ -135,7 +137,7 @@ const PhoneContextProvider = ({children}) => {
         refreshPhoneList,
         addNewPhone,
         selectedPhone,
-        setSelectedPhone,
+        onSetSelectedPhone,
         deletePhone,
         updatePhoneWithImage,
         updatePhoneWithOutImage,

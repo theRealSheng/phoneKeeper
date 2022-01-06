@@ -5,13 +5,6 @@ export default StyleSheet.create({
   container: {
     flex: 1,
   },
-  lottieContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  successLottie: {
-    aspectRatio: 0.5,
-  },
   successText: {
     position: 'absolute',
     bottom: '10%',
@@ -21,8 +14,5 @@ export default StyleSheet.create({
     position: 'absolute',
     bottom: '10%',
     color: Colors.error,
-  },
-  successDeleteLottie: {
-    aspectRatio: 0.47,
   },
 });

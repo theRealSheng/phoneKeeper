@@ -64,7 +64,7 @@ const Navigation = () => {
           },
         }}
       >
-        <RootStack.Screen name={'LaunchScreen'} component={LaunchScreen} />
+        <RootStack.Screen name={'LaunchScreen'} component={LaunchScreen} options={{headerShown: false}} />
         <RootStack.Screen name={'MainScreen'} component={MainScreen} options={{headerShown: false}} />
         <RootStack.Screen
           name={'AddPhoneScreen'}
