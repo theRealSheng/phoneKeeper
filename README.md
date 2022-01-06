@@ -16,8 +16,9 @@ Please git clone https://github.com/theRealSheng/phone-server for running local 
 Run following command at root level project
 1. yarn/npm install to install dependencies. 
 2. cd ios && pod install
-3. yarn ios or yarn android
+3. yarn ios or yarn android ****
 
+**IMPORTANT**: If you decided to run the server locally, for Android you will have to run the command "yarn android_dev" to order to map the ports.
 
 ### Run E2E testing
 Change the "selectedServer" in src => common => debug_config to "prod" in order to test again server remote server. Otherwise, if you wish to use "local", please run the server with "yarn start".
