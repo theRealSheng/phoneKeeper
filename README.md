@@ -7,15 +7,35 @@ Please follow the instructions at the following link and install depending on th
 https://reactnative.dev/docs/environment-setup
 
 ### How to run
-## Local
+The current config is pointing to prod so you do not have to run local server.
+
+If you want to run the local server, change the "selectedServer" in src => common => debug_config to "local".
+
+Please git clone https://github.com/theRealSheng/phone-server for running local server and follow the instruction in the repo.
+
+Run following command at root level project
+1. yarn/npm install to install dependencies. 
+2. cd ios && pod install
+3. yarn ios or yarn android
 
 
 ### Run E2E testing
-## IOS
+Change the "selectedServer" in src => common => debug_config to "prod" in order to test again server remote server. Otherwise, if you wish to use "local", please run the server with "yarn start".
 
+## IOS
+Install brew if you don't have it. => https://brew.sh/
+
+brew tap wix/brew
+brew install applesimutils
+
+GO TO: .detoxrs.json file at root level.
+
+Change the "device" key in devices => simulator => device and change to simulator of choice.
+
+1. Build IOS project - yarn build_test_ios/build_test_ios_release
+2. Run test command - yarn test_ios/test_ios_release
 
 ## Android
-Go to .detoxrs.json file at root level.
+IMPORTANT: At this moment Detox DOES NOT React Native 0.66.
 
-Change the avdName in devices.emulator.device.avdName to the emulator name in your system.
-
+It will not work for now.
