@@ -5,7 +5,7 @@ import AppConfig from '../config/app_config';
 
 const api = axios.create({
   baseURL: AppConfig.host(),
-  timeout: 10000,
+  timeout: 60000,
 });
 
 const ApiNetwork = {

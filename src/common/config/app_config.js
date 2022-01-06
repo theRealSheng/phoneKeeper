@@ -12,8 +12,8 @@ const AppConfig = {
   selectedServer: __DEV__ ? DebugConfig.selectedServer : 'prod',
   servers: {
     prod: {
-      api: '',
-      public: '',
+      api: 'https://phone-keeper.herokuapp.com/',
+      public: 'https://phone-keeper.herokuapp.com/',
     },
     beta: {
       api: '',
